@@ -255,64 +255,64 @@ nav .cart-icon .cart-item-count {
     background: #333;
 }
 
-.cart{
+.cart {
     padding: 110px 9% 30px;
 }
 
-.cart-header{
+.cart-header {
     display: flex;
     padding: 10px 0;
     font-weight: bold;
     border-bottom: 1px solid #ccc;
 }
 
-.cart-header span{
+.cart-header span {
     flex: 1;
     text-align: center;
 }
 
-.cart-header span:first-child{
+.cart-header span:first-child {
     flex: 2;
     text-align: left;
 }
 
-.cart-item{
+.cart-item {
     display: flex;
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.cart-item .product{
+.cart-item .product {
     display: flex;
     align-items: center;
     flex: 2;
 }
 
-.cart-item img{
+.cart-item img {
     width: 80px;
     margin-right: 15px;
 }
 
-.cart-item .size-color-box{
+.cart-item .size-color-box {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
 }
 
-.cart-item .size{
+.cart-item .size {
     padding: 6px 12px;
     background: #f2f2f2;
     font-size: 14px;
 }
 
-.cart-item :is(.price, .quantity, .total-price){
+.cart-item :is(.price, .quantity, .total-price) {
     flex: 1;
     text-align: center;
 }
 
-.cart-item .quantity input{
+.cart-item .quantity input {
     width: 50px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -320,44 +320,167 @@ nav .cart-icon .cart-item-count {
     text-align: center;
 }
 
-.cart-item .remove{
+.cart-item .remove {
     background: transparent;
     border: none;
     flex: 1;
 }
 
-.cart-item .remove i{
+.cart-item .remove i {
     font-size: 20px;
     color: #333;
     cursor: pointer;
 }
 
-.cart-total{
+.cart-total {
     width: 400px;
     margin: 50px 0 0 auto;
 }
 
-.cart-total h3{
+.cart-total h3 {
     margin-bottom: 15px;
 }
 
-.cart-total p{
+.cart-total p {
     display: flex;
     justify-content: space-between;
 }
 
-.cart-total p:not(:last-of-type){
+.cart-total p:not(:last-of-type) {
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
 
-.cart-total p:last-of-type{
+.cart-total p:last-of-type {
     font-weight: bold;
 }
 
-.cart-total .btn{
+.cart-total .btn {
     display: block;
     padding: 12px 30px;
     margin: 30px 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-collection {
+        padding: 90px 5% 20px;
+    }
+
+    .product-collection h1 {
+        font-size: 28px;
+    }
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        padding: 120px 5% 30px;
+    }
+
+    .product-img {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .thumbnail-list {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .thumbnail-list img {
+        height: 75px;
+        width: auto;
+    }
+
+    .cart {
+        padding: 100px 5% 30px;
+    }
+
+    .cart-header {
+        display: none;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cart-item .product {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 70px;
+    }
+
+    .cart-item .size-color-box {
+        flex-wrap: wrap;
+    }
+
+    .cart-item :is(.price, .quantity, .total-price, .remove) {
+        text-align: left;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .cart-item .quantity input {
+        width: 100%;
+    }
+
+    .cart-total {
+        width: 100%;
+    }
+
+    .cart-total .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .cart-icon {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .product-collection h1 {
+        font-size: 24px;
+    }
+
+    .product-info .title {
+        font-size: 20px;
+    }
+
+    .product-collection .title,
+    .description,
+    .size-selection p,
+    .color-selection p {
+        font-size: 14px;
+    }
+
+    .product-collection .price,
+    .product-info .price {
+        font-size: 20px;
+    }
+
+    .size-options button,
+    .color-options img {
+        width: 40px;
+        height: 40px;
+    }
 }
